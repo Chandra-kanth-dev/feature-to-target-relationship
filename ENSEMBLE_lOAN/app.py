@@ -181,9 +181,7 @@ st.write(
 def load_data():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-    # 🔍 HARD DEBUG — shows EXACT files Streamlit sees
-    st.error("DEBUG: Files in app directory")
-    st.write(os.listdir(BASE_DIR))
+
 
     DATA_PATH = os.path.join(BASE_DIR, "train_u6lujuX_CVtuZ9i.csv")  # 👈 exact name
 
@@ -357,6 +355,7 @@ No. Stacking improves performance **when base models are diverse** and
 make different types of errors. If base models are weak or similar,
 stacking may not improve results.
 """)
+
 
 
 

@@ -178,7 +178,7 @@ st.write(
 @st.cache_data
 def load_data():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    DATA_PATH = os.path.join(BASE_DIR, "credit_risk_dataset.csv")
+    DATA_PATH = os.path.join(BASE_DIR, "/content/train_u6lujuX_CVtuZ9i.csv")
     return pd.read_csv(DATA_PATH)
 
 df = load_data()
@@ -349,3 +349,4 @@ No. Stacking improves performance **when base models are diverse** and
 make different types of errors. If base models are weak or similar,
 stacking may not improve results.
 """)
+

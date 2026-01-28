@@ -175,10 +175,18 @@ st.write(
 # =========================================
 # LOAD DATA
 # =========================================
+
+
 @st.cache_data
 def load_data():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    DATA_PATH = os.path.join(BASE_DIR, "/content/train_u6lujuX_CVtuZ9i.csv")
+
+    # 🔍 HARD DEBUG — shows EXACT files Streamlit sees
+    st.error("DEBUG: Files in app directory")
+    st.write(os.listdir(BASE_DIR))
+
+    DATA_PATH = os.path.join(BASE_DIR, "loan_prediction.csv")  # 👈 exact name
+
     return pd.read_csv(DATA_PATH)
 
 df = load_data()
@@ -349,4 +357,5 @@ No. Stacking improves performance **when base models are diverse** and
 make different types of errors. If base models are weak or similar,
 stacking may not improve results.
 """)
+
 
